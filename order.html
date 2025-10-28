@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your order for custom products">
+    <title>Order - CustomCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>CustomCraft</h1>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="customize.html">Customize</a></li>
+                    <li><a href="order.html" class="active">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Complete Your Order</h2>
+                <p>Fill in your details to place your order</p>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <div class="container">
+                <div class="order-layout">
+                    <div class="order-form-container">
+                        <h3>Order Information</h3>
+                        <form id="orderForm" class="order-form">
+                            <div class="form-section">
+                                <h4>Personal Information</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h4>Shipping Address</h4>
+                                <div class="form-group">
+                                    <label for="address">Street Address *</label>
+                                    <input type="text" id="address" name="address" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="apartment">Apartment, Suite, etc. (Optional)</label>
+                                    <input type="text" id="apartment" name="apartment" class="form-control">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City *</label>
+                                        <input type="text" id="city" name="city" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State/Province *</label>
+                                        <input type="text" id="state" name="state" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="zipCode">ZIP/Postal Code *</label>
+                                        <input type="text" id="zipCode" name="zipCode" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="country">Country *</label>
+                                        <select id="country" name="country" class="form-control" required>
+                                            <option value="">Select Country</option>
+                                            <option value="us">United States</option>
+                                            <option value="ca">Canada</option>
+                                            <option value="uk">United Kingdom</option>
+                                            <option value="au">Australia</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h4>Order Details</h4>
+                                <div class="form-group">
+                                    <label for="orderProduct">Product *</label>
+                                    <select id="orderProduct" name="orderProduct" class="form-control" required>
+                                        <option value="">Select a product</option>
+                                        <option value="tshirt" data-price="24.99">Custom T-Shirt - $24.99</option>
+                                        <option value="mug" data-price="14.99">Custom Mug - $14.99</option>
+                                        <option value="phonecase" data-price="19.99">Phone Case - $19.99</option>
+                                        <option value="totebag" data-price="18.99">Tote Bag - $18.99</option>
+                                        <option value="cap" data-price="16.99">Cap - $16.99</option>
+                                        <option value="canvas" data-price="34.99">Canvas Print - $34.99</option>
+                                        <option value="hoodie" data-price="39.99">Hoodie - $39.99</option>
+                                        <option value="mousepad" data-price="12.99">Mouse Pad - $12.99</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="orderSize">Size *</label>
+                                    <select id="orderSize" name="orderSize" class="form-control" required>
+                                        <option value="xs">Extra Small (XS)</option>
+                                        <option value="s">Small (S)</option>
+                                        <option value="m" selected>Medium (M)</option>
+                                        <option value="l">Large (L)</option>
+                                        <option value="xl">Extra Large (XL)</option>
+                                        <option value="2xl">2XL</option>
+                                        <option value="3xl">3XL</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="orderQuantity">Quantity *</label>
+                                    <input type="number" id="orderQuantity" name="orderQuantity" class="form-control" min="1" max="100" value="1" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="customization">Customization Details *</label>
+                                    <textarea id="customization" name="customization" class="form-control" rows="4" placeholder="Describe your customization (text, colors, design details, etc.)" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h4>Additional Notes</h4>
+                                <div class="form-group">
+                                    <label for="notes">Special Instructions (Optional)</label>
+                                    <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Any special requests or delivery instructions"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">Place Order</button>
+                                <a href="customize.html" class="btn btn-secondary">Back to Customize</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <span>Subtotal:</span>
+                                <span id="summarySubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Shipping:</span>
+                                <span id="summaryShipping">$5.99</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Tax (estimated):</span>
+                                <span id="summaryTax">$0.00</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-total">
+                                <span>Total:</span>
+                                <span id="summaryTotal">$5.99</span>
+                            </div>
+                        </div>
+
+                        <div class="shipping-info">
+                            <h4>Shipping Information</h4>
+                            <p>Standard Shipping: 5-7 business days</p>
+                            <p>Free shipping on orders over $50</p>
+                        </div>
+
+                        <div class="guarantee-badge">
+                            <h4>✓ 100% Satisfaction Guarantee</h4>
+                            <p>We stand behind the quality of our products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CustomCraft</h3>
+                    <p>Creating personalized products since 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="customize.html">Customize</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@customcraft.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CustomCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize your product with our easy-to-use design tool">
+    <title>Customize - CustomCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>CustomCraft</h1>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="customize.html" class="active">Customize</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Customize Your Product</h2>
+                <p>Design your perfect custom product</p>
+            </div>
+        </section>
+
+        <section class="customize-section">
+            <div class="container">
+                <div class="customize-layout">
+                    <div class="customize-preview">
+                        <h3>Preview</h3>
+                        <div class="preview-container" id="previewContainer">
+                            <div class="preview-product" id="previewProduct">
+                                <div class="preview-text" id="previewText">Your Text Here</div>
+                            </div>
+                        </div>
+                        <div class="preview-info">
+                            <p><strong>Product:</strong> <span id="selectedProduct">T-Shirt</span></p>
+                            <p><strong>Price:</strong> <span id="productPrice">$24.99</span></p>
+                        </div>
+                    </div>
+
+                    <div class="customize-controls">
+                        <h3>Customization Options</h3>
+                        
+                        <div class="control-group">
+                            <label for="productSelect">Select Product</label>
+                            <select id="productSelect" class="form-control">
+                                <option value="tshirt" data-price="24.99">T-Shirt - $24.99</option>
+                                <option value="mug" data-price="14.99">Mug - $14.99</option>
+                                <option value="phonecase" data-price="19.99">Phone Case - $19.99</option>
+                                <option value="totebag" data-price="18.99">Tote Bag - $18.99</option>
+                                <option value="cap" data-price="16.99">Cap - $16.99</option>
+                                <option value="canvas" data-price="34.99">Canvas Print - $34.99</option>
+                                <option value="hoodie" data-price="39.99">Hoodie - $39.99</option>
+                                <option value="mousepad" data-price="12.99">Mouse Pad - $12.99</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="customText">Custom Text</label>
+                            <input type="text" id="customText" class="form-control" placeholder="Enter your text" maxlength="50">
+                            <small>Maximum 50 characters</small>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="textColor">Text Color</label>
+                            <div class="color-picker-group">
+                                <input type="color" id="textColor" value="#ffffff">
+                                <input type="text" id="textColorHex" class="form-control color-hex" value="#ffffff" readonly>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="backgroundColor">Product Color</label>
+                            <div class="color-picker-group">
+                                <input type="color" id="backgroundColor" value="#667eea">
+                                <input type="text" id="backgroundColorHex" class="form-control color-hex" value="#667eea" readonly>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="fontSize">Text Size</label>
+                            <input type="range" id="fontSize" min="16" max="48" value="24" class="form-range">
+                            <span id="fontSizeValue">24px</span>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="productSize">Product Size</label>
+                            <select id="productSize" class="form-control">
+                                <option value="xs">Extra Small (XS)</option>
+                                <option value="s">Small (S)</option>
+                                <option value="m" selected>Medium (M)</option>
+                                <option value="l">Large (L)</option>
+                                <option value="xl">Extra Large (XL)</option>
+                                <option value="2xl">2XL</option>
+                                <option value="3xl">3XL</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" class="form-control" min="1" max="100" value="1">
+                        </div>
+
+                        <div class="total-price">
+                            <h3>Total: <span id="totalPrice">$24.99</span></h3>
+                        </div>
+
+                        <div class="customize-actions">
+                            <button id="addToCart" class="btn btn-primary btn-large">Add to Cart</button>
+                            <a href="order.html" class="btn btn-secondary btn-large">Proceed to Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CustomCraft</h3>
+                    <p>Creating personalized products since 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="customize.html">Customize</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@customcraft.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CustomCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+</html>
